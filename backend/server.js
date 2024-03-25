@@ -2,14 +2,10 @@ import dotenv from 'dotenv';
 import express from 'express';
 import { dbConnect } from './configs/database.config.js';
 import cors from 'cors';
-// import userRouter from './src/routers/user.router.js';
-// import eventRouter from './src/routers/event.router.js';
-// import uploadRouter from './src/routers/upload.router.js';
-// import vendorRoute from './src/routers/vendor.router.js';
 
 dotenv.config();
 
-dbConnect();
+// dbConnect();
 
 const app = express();
 app.use(express.json());
@@ -20,7 +16,7 @@ app.get("/", (req, res) => {
     res.send("Server is running");
 });
 
-app.use("/api/users", userRouter);
+// app.use("/api/users", userRouter);
 
 const port = 5000;
 
